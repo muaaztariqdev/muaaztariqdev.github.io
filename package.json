@@ -1,0 +1,10 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "author": "muaaztariqdev",
+  "license": "ISC",
+  "description": "portfolio files",
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}

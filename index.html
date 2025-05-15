@@ -64,10 +64,80 @@
         <h2>Projects</h2>
         <div class="projects">
           <div class="project">
-            <h3>TRP </h3>
+            <h3>TSIM</h3>
+            <p>
+              <b>
+                Link:
+              </b>
+              <a href="https://ignishealth.com/solutions/tsim/" target="_blank">
+                https://ignishealth.com/solutions/tsim/
+              </a>
+            </p>
             <p>
               <b>Stack:</b>
-              NodeJS, Express, MongoDB, React, AWS EC2 (Deployment)
+              TypeScript, Angular, Python, Django, Django REST Framework (DRF), PostgreSQL, AWS (Deployment)
+            </p>
+            <p>
+              <b>Description:</b>
+              TSIM is a telehealth project management solution that provides:
+              <ul>
+                <li>
+                  Framework for setting up telehealth services
+                </li>
+                <li>
+                  Roadmap for scoping, designing and making services operational
+                </li>
+                <li>
+                  Operational CRM to ensure service engagement across all sites
+                </li>
+                <li>
+                  Knowledge sharing based on proven best practices
+                </li>
+              </ul>
+            </p>
+            <p>
+              <b>
+                Major Contributions:
+              </b>
+              <ul>
+                <li>
+                  <b>
+                    Multiple Dashboards:
+                  </b>
+                  Each user is allowed to create and manage multiple dashboards, 
+                  with the option to designate one as the default. 
+                  The default dashboard functions as the user's homepage upon login.
+                   In the absence of a designated default, the user is redirected 
+                   to an overview page displaying thumbnails of all available dashboards.
+                </li>
+                <li>
+                  <b>
+                    Exposing API Server:
+                  </b>
+                  A client company required access to the TSIM server's APIs in order to 
+                  integrate its own backend system with the TSIM infrastructure.
+                   Directing their users to log in to the TSIM server was not a viable solution.
+                    To facilitate this integration, I exposed the necessary server endpoints
+                     by generating API keys specifically for TSIM clients. Authentication between 
+                     the client's server and the TSIM backend was securely handled using the 
+                     OAuth protocol.
+                </li>
+              </ul>
+            </p>
+          </div>
+          <div class="project">
+            <h3>TRP (Telehealth Resource Program) </h3>
+            <p>
+              <b>
+                Link:
+              </b>
+              <a href="https://ignishealth.com/solutions/trp/" target="_blank">
+                https://ignishealth.com/solutions/trp/
+              </a>
+            </p>
+            <p>
+              <b>Stack:</b>
+              JavaScript, NodeJS, Express, MongoDB, React, Bootstrap, AWS EC2 (Deployment)
             </p>
             <p>
               <b>Description:</b>
@@ -76,12 +146,62 @@
                sources to gain actionable insights on everything from quality of care 
                outcomes to ROI.
             </p>
-          
-          </div>
-          <div class="project">
-            <h3>Project Two</h3>
-            <p>Another cool project you worked on with key highlights.</p>
-            <a href="#" target="_blank">View Project</a>
+            <p>
+              <b>
+                Major Contributions:
+              </b>
+              <ul>
+                <li>
+                  <b>
+                    Zoom APIs Integration:
+                  </b>
+                  I integrated Zoom APIs to retrieve meeting data for analytical purposes, specifically focusing on
+                   virtual consultations between healthcare providers and patients. The integration
+                    captured information related to meetings and their participants. To enable real-time
+                     data processing, Zoom Webhooks were also implemented. The registered webhook events 
+                     included key meeting and participant activities such as meeting start and end, participant
+                      join and leave, screen sharing, and disconnection events.
+                </li>
+                <li>
+                  <b>
+                    Group Based Permission:
+                  </b>
+                  User permissions were managed through user groups, with each group assigned
+                   access to specific modules. To grant a user access to a particular module, 
+                   the user had to be added to a group that already possessed the required 
+                   permissions. If a user needed access to only one specific module (e.g., module M), 
+                   it was necessary to either locate an existing group with access solely to
+                    that module or create a new group (e.g., group G), assign the relevant module
+                     permissions to it, and then add the user (e.g., user U) to that group. Users 
+                     who were not assigned to any group did not have access to any modules.
+                </li>
+                <li>
+                  <b>Multi-Tenancy:</b>
+                  The product was designed to support multiple clients, necessitating a clear separation
+                   of concerns on a per-tenant basis. To achieve this, multi-tenancy was implemented 
+                   in the backend. A single backend and database instance served all tenants, with the 
+                   architecture carefully designed to enforce tenant isolation and ensure secure,
+                    efficient multi-tenant operations.
+                </li>
+                <li>
+                  <b>Single-Sign-On with Microsoft Active Directory Federation Services (ADFS):</b>
+                  Single Sign-On (SSO) is typically implemented when product tenants prefer to manage
+                   user authentication independently and avoid sharing user data. This was the case 
+                   for TRP as well. In accordance with the client's requirements, authentication was 
+                   integrated using Active Directory Federation Services (ADFS).
+                </li>
+                <li>
+                  <b>
+                    Share Dashboard:
+                  </b>
+                  Users can create multiple dashboards and share them with other users within TRP 
+                  or make them publicly accessible. Public dashboards can be viewed by anyone 
+                  without requiring login, simply by accessing the unique dashboard link. To
+                   enable this sharing functionality, a shareable link was generated for each 
+                   dashboard.
+                </li>
+              </ul>
+            </p>
           </div>
         </div>
           
