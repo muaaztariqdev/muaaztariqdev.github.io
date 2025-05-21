@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -66,145 +66,253 @@
           <div class="project">
             <h3>TSIM</h3>
             <p>
-              <b>
-                Link:
-              </b>
+              <b> Link: </b>
               <a href="https://ignishealth.com/solutions/tsim/" target="_blank">
                 https://ignishealth.com/solutions/tsim/
               </a>
             </p>
             <p>
               <b>Stack:</b>
-              TypeScript, Angular, Python, Django, Django REST Framework (DRF), PostgreSQL, AWS (Deployment)
+              TypeScript, Angular, Python, Django, Django REST Framework (DRF),
+              PostgreSQL, AWS (Deployment)
             </p>
             <p>
               <b>Description:</b>
               TSIM is a telehealth project management solution that provides:
-              <ul>
-                <li>
-                  Framework for setting up telehealth services
-                </li>
-                <li>
-                  Roadmap for scoping, designing and making services operational
-                </li>
-                <li>
-                  Operational CRM to ensure service engagement across all sites
-                </li>
-                <li>
-                  Knowledge sharing based on proven best practices
-                </li>
-              </ul>
             </p>
+            <ul>
+              <li>Framework for setting up telehealth services</li>
+              <li>
+                Roadmap for scoping, designing and making services operational
+              </li>
+              <li>
+                Operational CRM to ensure service engagement across all sites
+              </li>
+              <li>Knowledge sharing based on proven best practices</li>
+            </ul>
             <p>
-              <b>
-                Major Contributions:
-              </b>
-              <ul>
-                <li>
-                  <b>
-                    Multiple Dashboards:
-                  </b>
-                  Each user is allowed to create and manage multiple dashboards, 
-                  with the option to designate one as the default. 
-                  The default dashboard functions as the user's homepage upon login.
-                   In the absence of a designated default, the user is redirected 
-                   to an overview page displaying thumbnails of all available dashboards.
-                </li>
-                <li>
-                  <b>
-                    Exposing API Server:
-                  </b>
-                  A client company required access to the TSIM server's APIs in order to 
-                  integrate its own backend system with the TSIM infrastructure.
-                   Directing their users to log in to the TSIM server was not a viable solution.
-                    To facilitate this integration, I exposed the necessary server endpoints
-                     by generating API keys specifically for TSIM clients. Authentication between 
-                     the client's server and the TSIM backend was securely handled using the 
-                     OAuth protocol.
-                </li>
-              </ul>
+              <b> Major Contributions: </b>
             </p>
+            <ul>
+              <li>
+                <b> Multiple Dashboards: </b>
+                Each user is allowed to create and manage multiple dashboards,
+                with the option to designate one as the default. The default
+                dashboard functions as the user's homepage upon login. In the
+                absence of a designated default, the user is redirected to an
+                overview page displaying thumbnails of all available dashboards.
+              </li>
+              <li>
+                <b> Exposing API Server: </b>
+                A client company required access to the TSIM server's APIs in
+                order to integrate its own backend system with the TSIM
+                infrastructure. Directing their users to log in to the TSIM
+                server was not a viable solution. To facilitate this
+                integration, I exposed the necessary server endpoints by
+                generating API keys specifically for TSIM clients.
+                Authentication between the client's server and the TSIM backend
+                was securely handled using the OAuth protocol.
+              </li>
+            </ul>
           </div>
           <div class="project">
-            <h3>TRP (Telehealth Resource Program) </h3>
+            <h3>TRP (Telehealth Resource Program)</h3>
             <p>
-              <b>
-                Link:
-              </b>
+              <b> Link: </b>
               <a href="https://ignishealth.com/solutions/trp/" target="_blank">
                 https://ignishealth.com/solutions/trp/
               </a>
             </p>
             <p>
               <b>Stack:</b>
-              JavaScript, NodeJS, Express, MongoDB, React, Bootstrap, AWS EC2 (Deployment)
+              JavaScript, NodeJS, Express, MongoDB, React, Bootstrap, AWS EC2
+              (Deployment)
             </p>
             <p>
               <b>Description:</b>
-              TRP is a telehealth business intelligence platform that centralizes
-               and analyzes real-time data from clinical, financial and operational 
-               sources to gain actionable insights on everything from quality of care 
-               outcomes to ROI.
+              TRP is a telehealth business intelligence platform that
+              centralizes and analyzes real-time data from clinical, financial
+              and operational sources to gain actionable insights on everything
+              from quality of care outcomes to ROI.
             </p>
             <p>
-              <b>
-                Major Contributions:
-              </b>
-              <ul>
-                <li>
-                  <b>
-                    Zoom APIs Integration:
-                  </b>
-                  I integrated Zoom APIs to retrieve meeting data for analytical purposes, specifically focusing on
-                   virtual consultations between healthcare providers and patients. The integration
-                    captured information related to meetings and their participants. To enable real-time
-                     data processing, Zoom Webhooks were also implemented. The registered webhook events 
-                     included key meeting and participant activities such as meeting start and end, participant
-                      join and leave, screen sharing, and disconnection events.
-                </li>
-                <li>
-                  <b>
-                    Group Based Permission:
-                  </b>
-                  User permissions were managed through user groups, with each group assigned
-                   access to specific modules. To grant a user access to a particular module, 
-                   the user had to be added to a group that already possessed the required 
-                   permissions. If a user needed access to only one specific module (e.g., module M), 
-                   it was necessary to either locate an existing group with access solely to
-                    that module or create a new group (e.g., group G), assign the relevant module
-                     permissions to it, and then add the user (e.g., user U) to that group. Users 
-                     who were not assigned to any group did not have access to any modules.
-                </li>
-                <li>
-                  <b>Multi-Tenancy:</b>
-                  The product was designed to support multiple clients, necessitating a clear separation
-                   of concerns on a per-tenant basis. To achieve this, multi-tenancy was implemented 
-                   in the backend. A single backend and database instance served all tenants, with the 
-                   architecture carefully designed to enforce tenant isolation and ensure secure,
-                    efficient multi-tenant operations.
-                </li>
-                <li>
-                  <b>Single-Sign-On with Microsoft Active Directory Federation Services (ADFS):</b>
-                  Single Sign-On (SSO) is typically implemented when product tenants prefer to manage
-                   user authentication independently and avoid sharing user data. This was the case 
-                   for TRP as well. In accordance with the client's requirements, authentication was 
-                   integrated using Active Directory Federation Services (ADFS).
-                </li>
-                <li>
-                  <b>
-                    Share Dashboard:
-                  </b>
-                  Users can create multiple dashboards and share them with other users within TRP 
-                  or make them publicly accessible. Public dashboards can be viewed by anyone 
-                  without requiring login, simply by accessing the unique dashboard link. To
-                   enable this sharing functionality, a shareable link was generated for each 
-                   dashboard.
-                </li>
-              </ul>
+              <b> Major Contributions: </b>
             </p>
+            <ul>
+              <li>
+                <b> Zoom APIs Integration: </b>
+                I integrated Zoom APIs to retrieve meeting data for analytical
+                purposes, specifically focusing on virtual consultations between
+                healthcare providers and patients. The integration captured
+                information related to meetings and their participants. To
+                enable real-time data processing, Zoom Webhooks were also
+                implemented. The registered webhook events included key meeting
+                and participant activities such as meeting start and end,
+                participant join and leave, screen sharing, and disconnection
+                events.
+              </li>
+              <li>
+                <b> Group Based Permission: </b>
+                User permissions were managed through user groups, with each
+                group assigned access to specific modules. To grant a user
+                access to a particular module, the user had to be added to a
+                group that already possessed the required permissions. If a user
+                needed access to only one specific module (e.g., module M), it
+                was necessary to either locate an existing group with access
+                solely to that module or create a new group (e.g., group G),
+                assign the relevant module permissions to it, and then add the
+                user (e.g., user U) to that group. Users who were not assigned
+                to any group did not have access to any modules.
+              </li>
+              <li>
+                <b>Multi-Tenancy:</b>
+                The product was designed to support multiple clients,
+                necessitating a clear separation of concerns on a per-tenant
+                basis. To achieve this, multi-tenancy was implemented in the
+                backend. A single backend and database instance served all
+                tenants, with the architecture carefully designed to enforce
+                tenant isolation and ensure secure, efficient multi-tenant
+                operations.
+              </li>
+              <li>
+                <b
+                  >Single-Sign-On with Microsoft Active Directory Federation
+                  Services (ADFS):</b
+                >
+                Single Sign-On (SSO) is typically implemented when product
+                tenants prefer to manage user authentication independently and
+                avoid sharing user data. This was the case for TRP as well. In
+                accordance with the client's requirements, authentication was
+                integrated using Active Directory Federation Services (ADFS).
+              </li>
+              <li>
+                <b> Share Dashboard: </b>
+                Users can create multiple dashboards and share them with other
+                users within TRP or make them publicly accessible. Public
+                dashboards can be viewed by anyone without requiring login,
+                simply by accessing the unique dashboard link. To enable this
+                sharing functionality, a shareable link was generated for each
+                dashboard.
+              </li>
+            </ul>
           </div>
-        </div>
-          
+          <div class="project">
+            <h3>Ucardia</h3>
+            <p>
+              <b> Link: </b>
+              <a href="https://ucardia.com/" target="_blank">
+                https://ucardia.com/
+              </a>
+            </p>
+            <p>
+              <b>Stack:</b>
+              JavaScript, React, Redux, NodeJS, Express, MongoDB, Redis
+              (Caching), GCP (Deployment)
+            </p>
+            <p>
+              <b>Description:</b>
+              Ucardia is a healthcare solution specifically designed for heart
+              patients.
+            </p>
+            <p>
+              <b> Major Contributions: </b>
+            </p>
+            <ul>
+              <li>
+                <b> In App Video/Audio Calling and Chatting: </b>
+                Implemented in-app calling functionality between healthcare
+                providers and patients using Twilio. I developed a system for
+                creating and managing video call rooms, allowing users to join
+                and share media tracks within each session to enable seamless
+                communication. Additionally, I integrated a real-time chat
+                feature, also powered by Twilio, to support text-based
+                interactions within the app.
+              </li>
+              <li>
+                <b> Making Metrics for Analytics: </b>
+                Defined various health metrics to monitor patient well-being,
+                leveraging historical data collected from patients. This data
+                was stored across multiple relational tables, and complex SQL
+                queries were used to compute the required metrics. To improve
+                performance, query optimization techniques such as indexing and
+                selective data denormalization were implemented to reduce the
+                number of joins and enhance overall efficiency.
+              </li>
+              <li>
+                <b> Making the Whole Frontend App from the Scratch: </b>
+                Developed the entire front-end application from scratch using
+                React, Redux, and Ant Design, ensuring high code quality and
+                performance optimization throughout. Despite a tight deadline, I
+                successfully delivered core modules—including user
+                authentication (sign-up/sign-in), video/audio/text chat, patient
+                record uploads, and performance monitoring dashboards—within
+                just two weeks, meeting the client's urgent requirements without
+                compromising on quality.
+              </li>
+              <li>
+                <b> Training and Leading the New Joiner on the Project: </b>
+                Onboarded and mentored a junior engineer, providing training on
+                the project's tech stack and architecture. Took on a leadership
+                role by assigning tasks, guiding development efforts, and
+                ensuring alignment with project goals and standards
+              </li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>Identify-U</h3>
+            <p>
+              <b> Link: </b>
+              <a href="https://identifyu.com/" target="_blank">
+                https://identifyu.com/
+              </a>
+            </p>
+            <p>
+              <b>Stack:</b>
+              TypeScript, React, Redux, NodeJS, Express-Typescript, PostgreSQL,
+              Redis (Caching), AWS (Deployment)
+            </p>
+            <p>
+              <b>Description:</b>
+              IdentifyU is a dynamic community fostering self-improvement by
+              connecting members with pre-vetted behavioral experts. Through a
+              holistic approach encompassing coaching, community engagement, and
+              cutting-edge technology, IdentifyU is dedicated to guiding members
+              toward success.
+            </p>
+            <p>
+              <b> Major Contributions: </b>
+            </p>
+            <ul>
+              <li>
+                <b> Built the Structure of the Entire App from the Scratch: </b>
+                Worked under the supervision of the Head of Engineering to
+                develop both the front-end and back-end of the Identify-U
+                platform from the ground up. The application included real-time
+                features such as calling and chat. I was responsible for
+                building backend APIs and creating a fully responsive front-end
+                interface. The entire system was successfully delivered within
+                six months.
+              </li>
+              <li>
+                <b>
+                  Integrating Stripe for Different Level of Subscriptions:
+                </b>
+                Identify-U offered tiered subscription plans for both individual
+                users and businesses sponsoring their employees. Subscription
+                management and payment processing were seamlessly handled using
+                Stripe, ensuring accuracy and consistency across all
+                transactions.
+              </li>
+              <li>
+                <b> Leading the team of Engineers: </b>
+                After establishing the initial project structure, the team
+                expanded with the addition of three engineers, and I was
+                promoted to lead their efforts. In this role, I supported them
+                in completing their tasks efficiently while ensuring the timely
+                delivery of sprint goals and maintaining project momentum.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -213,8 +321,8 @@
       <div class="container">
         <h2>Contact</h2>
         <p>Feel free to reach out if you want to collaborate or just say hi!</p>
-        <p>Email: <a href="#contact">muaaz.tariq.dev@gmail.com</a></p>
-        <p>Phone: <a href="#contact">+92-315-828-2727</a> (WhatsApp)</p>
+        <p>Email: muaaz.tariq.dev@gmail.com</p>
+        <p>Phone: +92-315-828-2727 (WhatsApp)</p>
       </div>
     </section>
 
